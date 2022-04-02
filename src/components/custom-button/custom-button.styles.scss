@@ -16,6 +16,11 @@
   display: flex;
   justify-content: center;
 
+  @media screen and (max-width:800px) {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
   &:hover {
     background-color: white;
     color: black;
@@ -25,6 +30,9 @@
   &.google-sign-in{
     background-color: #4285f4;
     color: white;
+    @media screen and (max-width:800px) {
+      font-size: 11px;
+    }
 
     &:hover{
       background-color: #357ea8;

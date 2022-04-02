@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react';
-import { Route, Routes, Navigate, useParams } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
@@ -14,7 +14,7 @@ import {selectCurrentUser} from './redux/user/user.selectors'
 import {createStructuredSelector} from 'reselect';
 import CheckoutPage from './pages/checkout/checkout.component';
 import CollectionPage from './pages/collection/collection.component';
-
+import Contact from './pages/contacts/contact.component';
 
 
 
@@ -63,6 +63,7 @@ class App extends React.Component {
         </Route>
         <Route path = '/signin' element={this.props.currentUser? (<Navigate replace to='/' />) : (<SignInAndSignUpPage />)} />
         <Route path = '/checkout' element={<CheckoutPage />} />
+        <Route path = '/contact' element={<Contact />} />
       </Routes>
     </div>
   );}
